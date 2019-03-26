@@ -1,0 +1,268 @@
+.container {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.app-overlay {
+	z-index: 100;
+	background: #FFF;
+}
+
+.app-text-dark {
+	color: #4A0072;
+}
+
+.app-text-light {
+	color: #AE52D4;
+}
+
+.app-text-s {
+	color: #1976d2;
+}
+
+.app-text {
+	color: #7B1FA2;
+}
+
+.app-bg-p-dark {
+	background: #E8E8E8;
+}
+
+.input-group-text.app-bg-p-dark.text-light {
+	background: #1976d2;
+}
+
+.app-bg-p-light {
+	border-radius: .25rem 0rem 0rem .25rem !important;
+}
+
+.card-footer {
+	background: #D0D0D0;
+}
+
+.card-header {
+	background: #1976d2;
+}
+
+.app-bg-p-light {
+	background: #F0F0F0;
+}
+
+.app-bg-s {
+	background: #1976d2;
+}
+
+.app-border {
+	border: none;
+}
+
+.app-border-p-dark {
+	border: 1px solid #4A0072;
+}
+
+.app-border-p {
+	border-color: #7B1FA2 !important;
+}
+
+.app-border-light {
+	border-color: #FFF;
+}
+
+.app-btn-outline-p {
+	color: #7B1FA2;
+	border-color: #7B1FA2;
+}
+
+.app-btn-outline-p:hover {
+	color: #FFF;
+	background-color: #7B1FA2;
+	border-color: #7B1FA2;
+}
+
+.app-btn-outline-s {
+	color: #FFF;
+	background-color: #1976d2;
+	border-color: #FFF;
+}
+
+.app-btn-outline-s:hover {
+	color: #1976d2;
+	background-color: #FFF;
+	border-color: #FFF;
+}
+
+.app-message {
+	margin-bottom: 1rem;
+	max-width: 100%;
+	display: flex;
+	clear: both;
+	flex-direction: column;
+}
+
+.app-message-content {
+	order: 1;
+}
+
+.rounded.p-4.w-50.app-bg-p.app-border.text-white {
+	background-color: #D0D0D0;
+}
+
+h4 {
+	color: #000000;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.app-message-sender {
+	background: #D0D0D0;
+	border-radius: 1rem;
+	color: #000000;
+	padding: 4px 8px;
+	max-width: 100%;
+	word-wrap: break-word;
+	display: inline-block;
+}
+
+.spacing {
+	margin-left: auto;
+}
+.app-message-payload {
+	display: inline;
+}
+.app-load-messages {
+	text-align: center;
+	padding: 2px 0;
+	cursor: pointer;
+	background-size: 100% 200%;
+	background-image: linear-gradient(to bottom, transparent 50%, #1976d2 50%);
+	transition: background-position 0.5s;
+	border-radius: .25rem .25rem .25rem .25rem;
+}
+
+.app-load-messages:hover {
+	background-position: 0 -100%;
+}
+
+.app-load-messages-text {
+	text-align: center;
+	color: #1976d2 !important;
+}
+
+.app-load-messages-text:hover {
+	color: #FFF !important;
+}
+
+.card-body {
+	overflow-y: scroll;
+	height: 70vh;
+}
+
+.app-disabled {
+	cursor: not-allowed;
+	background: lightgrey;
+	color: grey;
+}
+
+.app-message-tool {
+	margin-top: -5%;
+	cursor: pointer;
+	color: #808080 !important;
+}
+
+.app-message-tool.mr-2.app-text.message-edit {
+	padding-left: 15px;
+}
+
+.message-info {
+	order: 2;
+}
+
+.app-message-timestamp-itsy-bitsy {
+	display: none;
+}
+
+.self .app-message-content {
+	float: right;
+}
+
+.app-message.self {
+	float: right;
+}
+
+.self .app-message-sender {
+	background: #1976d2;
+	color: #FFF;
+	float: right;
+}
+
+.message-info.self {
+	float: right;
+}
+
+.d-flex {
+	order: 2;
+}
+
+.self .message-meta.d-flex {
+	float: right;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: rgba(0, 0, 0, 0);
+	-webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+	background-color: rgba(0, 0, 0, 0.09);
+}
+
+
+::-webkit-scrollbar-thumb:vertical {
+	background: #D0D0D0;
+	-webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+	background: rgba(0, 0, 0, 0.61);
+	-webkit-border-radius: 100px;
+}
+
+@media only screen and (max-width: 450px) {
+	.app-message-timestamp-itsy-bitsy {
+		display: unset;
+	}
+	.app-message-timestamp.small {
+		display: none;
+	}
+	#name {
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+	}
+	.input-group.input-group-lg.mb-3 {
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+	.btn.app-btn-outline-s.btn-block.btn-lg {
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 1025px) {
+	.w-50 {
+		width: 90% !important;
+	}
+	.p-4 {
+		padding: 0 !important;
+	}
+	.card {
+		height: 100vh !important;
+	}
+	.container {
+		overflow: hidden !important;
+	}
+}

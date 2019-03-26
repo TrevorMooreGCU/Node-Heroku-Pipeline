@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GCU Cloud Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Dependencies -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+    integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
+    integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+
+  <link rel="stylesheet" href="sweetalert2.min.css" />
+  <script src="sweetalert2.min.js"></script>
+  <!-- Custom -->
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+  <script src="Messaging.js"></script>
+  <script src="site.js"></script>
+</head>
+
+<body class="app-bg-p-dark">
+  <!-- Identification module -->
+  <div class="align-items-center h-100 justify-content-around position-absolute w-100 app-overlay d-none" id="overlay">
+    <div id="name" class="rounded p-4 w-50 app-bg-p app-border text-white">
+      <div class="mb-3">
+        <h4>Who are you?</h4>
+      </div>
+      <div class="input-group input-group-lg mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text app-bg-p-dark text-light app-border">Nickname</span>
+        </div>
+        <input class="form-control" id="name-input" maxlength="24" />
+      </div>
+      <button class="btn app-btn-outline-s btn-block btn-lg" onclick="App.actions.setName()">Okay, let's chat</button>
+    </div>
+  </div>
+
+  <!-- Main app -->
+  <div class="position-relative p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card app-bg-p app-border text-light">
+            <div class="card-header">
+              <h1 id="display-name">anonymous</h1>
+            </div>
+            <div class="card-body bg-light text-dark">
+              <div class="app-load-messages mb-3" id="load-messages" onclick="App.actions.loadMessages()">
+                <div class="app-load-messages-text">Load more messages</div>
+              </div>
+              <div class="app-message-board" id="message-board"></div>
+            </div>
+            <div class="card-footer">
+              <div class="app-message-creator">
+                <div class="input-group">
+                  <input class="form-control app-border-light app-bg-p-light app-text-dark" id="message-input"
+                    maxlength="140" placeholder="Message @GCU"/>
+                  <div class="input-group-append">
+                    <button class="btn app-btn-outline-s px-3" onclick="App.actions.sendMessage()"><i
+                        class="fas fa-paper-plane"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
