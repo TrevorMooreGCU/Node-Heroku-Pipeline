@@ -1,7 +1,7 @@
 function initApp() {
   Utils = {
 
-    // get a cookie from the document.cookie string
+    // get a cookie from the document.cookie string 
     getCookie: (name) => {
       const key = `${name}=`;
       const decodedCookie = decodeURIComponent(document.cookie);
