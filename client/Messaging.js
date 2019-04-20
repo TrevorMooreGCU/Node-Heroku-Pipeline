@@ -1,7 +1,7 @@
 function initApp() {
   Utils = {
 
-    // get a cookie from the document.cookie object   
+    // get a cookie from the document.cookie string
     getCookie: (name) => {
       const key = `${name}=`;
       const decodedCookie = decodeURIComponent(document.cookie);
@@ -257,7 +257,10 @@ function initApp() {
         Utils.setCookie('nickname', name, 14);
 
         // update the app state
-        App.state.name = name;
+		App.state.name = name;
+
+		// update the chat title
+		App.dom.updateName();
 
         // destroy the editor
         App.dom.destoryEditor();
